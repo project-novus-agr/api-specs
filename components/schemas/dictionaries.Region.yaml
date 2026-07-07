@@ -1,0 +1,12 @@
+type: object
+required:
+  - id
+  - flUkraine
+  - name
+properties:
+  id:
+    type: integer
+  flUkraine:
+    type: boolean
+  name:
+    $ref: ./dictionaries.LocaleName.yaml

@@ -1,0 +1,6 @@
+schema:
+  type: string
+in: header
+name: request-id
+required: false
+description: Ідентифікатор запиту для наскрізного логування.

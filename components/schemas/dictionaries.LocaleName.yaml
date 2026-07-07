@@ -1,0 +1,18 @@
+description: Локалізовані назви по мовах.
+type: object
+properties:
+  uk:
+    description: Назва українською мовою
+    anyOf:
+      - type: string
+      - type: 'null'
+  ru:
+    description: Назва російською мовою
+    anyOf:
+      - type: string
+      - type: 'null'
+  en:
+    description: Назва англійською мовою
+    anyOf:
+      - type: string
+      - type: 'null'

@@ -1,0 +1,27 @@
+type: object
+required:
+  - id
+  - name
+  - stage
+  - description
+  - flSingleton
+  - flFinal
+  - flCancel
+  - flAutoClose
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  stage:
+    type: integer
+  description:
+    type: string
+  flSingleton:
+    type: boolean
+  flFinal:
+    type: boolean
+  flCancel:
+    type: boolean
+  flAutoClose:
+    type: boolean

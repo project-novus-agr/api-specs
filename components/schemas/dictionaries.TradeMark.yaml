@@ -1,0 +1,24 @@
+type: object
+required:
+  - id
+  - name
+  - fullName
+  - flOwnTradeMark
+  - flExclusive
+  - regionsRef
+  - flClosed
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  fullName:
+    type: string
+  flOwnTradeMark:
+    type: boolean
+  flExclusive:
+    type: boolean
+  regionsRef:
+    type: integer
+  flClosed:
+    type: boolean

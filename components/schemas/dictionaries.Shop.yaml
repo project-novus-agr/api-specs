@@ -1,0 +1,30 @@
+type: object
+required:
+  - id
+  - warehouseRegionsRef
+  - latitude
+  - longitude
+  - name
+  - schedule
+  - address
+properties:
+  id:
+    type: integer
+  warehouseRegionsRef:
+    type: integer
+  latitude:
+    type: number
+  longitude:
+    type: number
+  name:
+    anyOf:
+      - $ref: ./dictionaries.LocaleName.yaml
+      - type: 'null'
+  schedule:
+    anyOf:
+      - $ref: ./dictionaries.LocaleName.yaml
+      - type: 'null'
+  address:
+    anyOf:
+      - $ref: ./dictionaries.LocaleName.yaml
+      - type: 'null'

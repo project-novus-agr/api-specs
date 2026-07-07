@@ -1,0 +1,12 @@
+type: object
+required:
+  - id
+  - name
+  - trademarksRef
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  trademarksRef:
+    type: integer

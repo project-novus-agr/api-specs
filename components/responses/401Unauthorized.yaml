@@ -1,0 +1,11 @@
+description: Невалідний або відсутній токен
+content:
+  application/json:
+    schema:
+      description: Невалідний або відсутній токен
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: string

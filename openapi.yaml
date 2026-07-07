@@ -1,0 +1,36 @@
+openapi: 3.0.3
+info:
+  title: Agromat API
+  version: 3.0.0
+  description: Новий API
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+paths:
+  /api/dictionaries/measures:
+    $ref: paths/api_dictionaries_measures.yaml
+  /api/dictionaries/regions:
+    $ref: paths/api_dictionaries_regions.yaml
+  /api/dictionaries/shops:
+    $ref: paths/api_dictionaries_shops.yaml
+  /api/dictionaries/warehouse-regions:
+    $ref: paths/api_dictionaries_warehouse-regions.yaml
+  /api/dictionaries/inventory-collections:
+    $ref: paths/api_dictionaries_inventory-collections.yaml
+  /api/dictionaries/trademarks:
+    $ref: paths/api_dictionaries_trademarks.yaml
+  /api/dictionaries/goods-availability-statuses:
+    $ref: paths/api_dictionaries_goods-availability-statuses.yaml
+  /api/dictionaries/delivery-departments:
+    $ref: paths/api_dictionaries_delivery-departments.yaml
+  /api/dictionaries/warehouses:
+    $ref: paths/api_dictionaries_warehouses.yaml
+  /api/dictionaries/doc-stages:
+    $ref: paths/api_dictionaries_doc-stages.yaml
+  /api/dictionaries/payment-systems:
+    $ref: paths/api_dictionaries_payment-systems.yaml
+  /api/dictionaries/inventory-analytics:
+    $ref: paths/api_dictionaries_inventory-analytics.yaml

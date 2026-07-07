@@ -1,0 +1,4 @@
+node_modules/
+redoc-static.html
+.DS_Store
+public/

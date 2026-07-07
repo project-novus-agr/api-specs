@@ -1,0 +1,32 @@
+type: object
+required:
+  - id
+  - name
+  - warehouseRegionsRef
+  - address
+  - fullAddress
+  - latitude
+  - longitude
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  warehouseRegionsRef:
+    type: integer
+  address:
+    anyOf:
+      - type: string
+      - type: 'null'
+  fullAddress:
+    anyOf:
+      - type: string
+      - type: 'null'
+  latitude:
+    anyOf:
+      - type: number
+      - type: 'null'
+  longitude:
+    anyOf:
+      - type: number
+      - type: 'null'

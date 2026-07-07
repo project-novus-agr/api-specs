@@ -1,0 +1,15 @@
+type: object
+required:
+  - id
+  - iCode
+  - name
+  - fullName
+properties:
+  id:
+    type: integer
+  iCode:
+    type: string
+  name:
+    $ref: ./dictionaries.LocaleName.yaml
+  fullName:
+    $ref: ./dictionaries.LocaleName.yaml

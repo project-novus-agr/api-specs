@@ -1,0 +1,6 @@
+schema:
+  format: int64
+  type: integer
+description: >-
+  Актуальний серверний числовий таймстемп (Unix Timestamp у мілісекундах) на
+  момент вибірки.

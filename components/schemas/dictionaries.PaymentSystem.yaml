@@ -1,0 +1,15 @@
+type: object
+required:
+  - id
+  - name
+  - description
+  - creditPaymentsCount
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  description:
+    type: string
+  creditPaymentsCount:
+    type: integer

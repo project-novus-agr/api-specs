@@ -1,0 +1,9 @@
+schema:
+  format: int64
+  type: integer
+in: query
+name: since
+required: false
+description: >-
+  Числовий таймстемп останньої синхронізації (Unix Timestamp у мілісекундах).
+  Якщо не передано — повна синхронізація.
