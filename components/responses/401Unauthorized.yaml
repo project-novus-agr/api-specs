@@ -2,10 +2,18 @@ description: Невалідний або відсутній токен
 content:
   application/json:
     schema:
-      description: Невалідний або відсутній токен
       type: object
       required:
+        - statusCode
         - error
+        - message
       properties:
+        statusCode:
+          type: integer
+          example: 401
         error:
           type: string
+          example: Unauthorized
+        message:
+          type: string
+          example: "Format is Authorization: Bearer [token]"
