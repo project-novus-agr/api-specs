@@ -19,12 +19,12 @@ properties:
   name:
     anyOf:
       - $ref: ./dictionaries.LocaleName.yaml
-      - type: 'null'
+      - type: "null"
   schedule:
     anyOf:
       - $ref: ./dictionaries.LocaleName.yaml
-      - type: 'null'
+      - type: "null"
   address:
     anyOf:
       - $ref: ./dictionaries.LocaleName.yaml
-      - type: 'null'
+      - type: "null"

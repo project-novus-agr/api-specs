@@ -15,18 +15,18 @@ properties:
   warehouseRegionsRef:
     type: integer
   address:
-    anyOf:
-      - type: string
-      - type: 'null'
+    type:
+      - string
+      - "null"
   fullAddress:
-    anyOf:
-      - type: string
-      - type: 'null'
+    type:
+      - string
+      - "null"
   latitude:
-    anyOf:
-      - type: number
-      - type: 'null'
+    type:
+      - number
+      - "null"
   longitude:
-    anyOf:
-      - type: number
-      - type: 'null'
+    type:
+      - number
+      - "null"

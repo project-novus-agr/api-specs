@@ -1,24 +1,28 @@
 {
-    "name": "api-specs",
-    "version": "1.0.0",
-    "description": "",
-    "scripts": {
-        "build:redoc": "redocly build-docs openapi.yaml -o public/redoc.html",
-        "build:bundle": "redocly bundle openapi.yaml -o public/openapi.yaml --ext yaml",
-        "build:portal": "cp index.html public/index.html && cp scalar.html public/scalar.html && cp swagger.html public/swagger.html",
-        "build": "mkdir -p public && npm run build:redoc && npm run build:bundle && npm run build:portal"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/project-novus-agr/api-specs.git"
-    },
-    "keywords": [],
-    "author": "",
-    "bugs": {
-        "url": "https://github.com/project-novus-agr/api-specs/issues"
-    },
-    "homepage": "https://github.com/project-novus-agr/api-specs#readme",
-    "devDependencies": {
-        "@redocly/cli": "^2.37.0"
-    }
+  "name": "api-specs",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "format": "prettier --write \"**/*.yaml\" \"**/*.yml\" \"**/*.json\"",
+    "format:check": "prettier --check \"**/*.yaml\" \"**/*.yml\" \"**/*.json\"",
+    "lint": "redocly lint openapi.yaml",
+    "build:redoc": "redocly build-docs openapi.yaml -o public/redoc.html",
+    "build:bundle": "redocly bundle openapi.yaml -o public/openapi.yaml --ext yaml",
+    "build:portal": "cp index.html public/index.html && cp scalar.html public/scalar.html && cp swagger.html public/swagger.html",
+    "build": "mkdir -p public && npm run build:redoc && npm run build:bundle && npm run build:portal"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/project-novus-agr/api-specs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/project-novus-agr/api-specs/issues"
+  },
+  "homepage": "https://github.com/project-novus-agr/api-specs#readme",
+  "devDependencies": {
+    "@redocly/cli": "^2.37.0",
+    "prettier": "^3.9.4"
+  }
 }

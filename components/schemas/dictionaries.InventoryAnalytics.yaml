@@ -2,13 +2,21 @@ type: object
 description: >
   Запис характеристики. Якщо pid == null — це сама характеристика;
   якщо pid != null — значення характеристики (pid вказує на батьківську).
+required:
+  - id
+  - pid
+  - keyStr
+  - name
 properties:
   id:
     type: integer
   pid:
-    type: integer
-    nullable: true
+    type:
+      - integer
+      - "null"
   keyStr:
     type: string
   name:
-    $ref: ./dictionaries.LocaleName.yaml
+    anyOf:
+      - $ref: ./dictionaries.LocaleName.yaml
+      - type: "null"

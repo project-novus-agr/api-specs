@@ -1,8 +1,14 @@
-openapi: 3.0.3
+openapi: 3.1.0
 info:
   title: Agromat API
   version: 3.0.0
   description: Новий API
+  license:
+    name: Proprietary
+    identifier: Proprietary
+servers:
+  - url: https://api.example.com
+    description: TBD
 components:
   securitySchemes:
     bearerAuth:

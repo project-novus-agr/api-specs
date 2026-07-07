@@ -1,5 +1,6 @@
 get:
   summary: Характеристики та їхні значення
+  operationId: getInventoryAnalytics
   tags:
     - dictionaries
   parameters:
@@ -7,11 +8,8 @@ get:
   security:
     - bearerAuth: []
   responses:
-    '200':
+    "200":
       description: OK
-      headers:
-        x-sync-timestamp:
-          $ref: ../components/headers/SyncTimestamp.yaml
       content:
         application/json:
           schema:
@@ -19,5 +17,5 @@ get:
             type: array
             items:
               $ref: ../components/schemas/dictionaries.InventoryAnalytics.yaml
-    '401':
+    "401":
       $ref: ../components/responses/401Unauthorized.yaml
