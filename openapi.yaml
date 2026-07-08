@@ -40,3 +40,5 @@ paths:
     $ref: paths/api_dictionaries_payment-systems.yaml
   /api/dictionaries/inventory-analytics:
     $ref: paths/api_dictionaries_inventory-analytics.yaml
+  /api/discount-sets:
+    $ref: paths/api_discount-sets.yaml

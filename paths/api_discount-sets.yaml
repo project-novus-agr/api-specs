@@ -1,0 +1,25 @@
+get:
+  summary: Акційні набори
+  operationId: getDiscountSets
+  tags:
+    - discounts
+  parameters:
+    - $ref: ../components/parameters/Since.yaml
+    - $ref: ../components/parameters/RequestId.yaml
+  security:
+    - bearerAuth: []
+  responses:
+    "200":
+      description: OK
+      headers:
+        x-sync-timestamp:
+          $ref: ../components/headers/SyncTimestamp.yaml
+      content:
+        application/json:
+          schema:
+            description: OK
+            type: array
+            items:
+              $ref: ../components/schemas/discounts.DiscountWithSets.yaml
+    "401":
+      $ref: ../components/responses/401Unauthorized.yaml

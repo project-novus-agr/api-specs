@@ -1,0 +1,28 @@
+type: object
+description: Набір товарів у складі акції.
+required:
+  - id
+  - name
+  - costOfSeparates
+  - cost
+  - discountPercent
+  - goods
+properties:
+  id:
+    type: integer
+  name:
+    $ref: ./dictionaries.LocaleName.yaml
+  costOfSeparates:
+    description: Базова ціна набору при купівлі товарів окремо.
+    type: number
+  cost:
+    description: Фактична акційна ціна набору.
+    type: number
+  discountPercent:
+    description: Відсоток фактичної знижки набору.
+    type: number
+  goods:
+    description: Товари, що входять у набір.
+    type: array
+    items:
+      $ref: ./discounts.DiscountSetGood.yaml
