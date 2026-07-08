@@ -1,0 +1,9 @@
+type: object
+required:
+  - marketingProgramsRef
+  - priceval
+properties:
+  marketingProgramsRef:
+    type: integer
+  priceval:
+    type: number

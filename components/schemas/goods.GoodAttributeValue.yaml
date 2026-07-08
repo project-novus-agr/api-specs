@@ -1,0 +1,12 @@
+type: object
+description: >
+  Ідентифікатори зі списку /api/dictionaries/inventory-analytics —
+  характеристика та її значення.
+required:
+  - analyticsRef
+  - valueRef
+properties:
+  analyticsRef:
+    type: integer
+  valueRef:
+    type: integer
