@@ -40,3 +40,5 @@ paths:
     $ref: paths/api_dictionaries_payment-systems.yaml
   /api/dictionaries/inventory-analytics:
     $ref: paths/api_dictionaries_inventory-analytics.yaml
+  /api/identical-goods:
+    $ref: paths/api_identical-goods.yaml

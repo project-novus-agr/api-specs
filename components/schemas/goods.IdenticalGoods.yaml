@@ -1,0 +1,17 @@
+type: object
+description: Аналоги (ідентичні товари) для товару.
+required:
+  - goodsRef
+  - identGoodsRef
+  - deleted
+properties:
+  goodsRef:
+    type: integer
+  identGoodsRef:
+    description: Список ID товарів-аналогів.
+    type: array
+    items:
+      type: integer
+  deleted:
+    description: Ознака видалення для інкрементальної синхронізації.
+    type: boolean
