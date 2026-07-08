@@ -1,0 +1,37 @@
+type: object
+description: Маркетингова програма (промокоди / картки лояльності).
+required:
+  - id
+  - name
+  - startDate
+  - endDate
+  - flPercentDiscount
+  - flNeedPersonalization
+  - discountCards
+  - deleted
+properties:
+  id:
+    type: integer
+  name:
+    $ref: ./dictionaries.LocaleName.yaml
+  startDate:
+    description: Дата початку дії програми.
+    type: string
+    format: date
+  endDate:
+    description: Дата закінчення дії програми.
+    type: string
+    format: date
+  flPercentDiscount:
+    description: Якщо true — знижка у відсотках, а не фіксована сума.
+    type: boolean
+  flNeedPersonalization:
+    description: Картка/сертифікат прив'язані до персональних даних.
+    type: boolean
+  discountCards:
+    type: array
+    items:
+      $ref: ./marketing.DiscountCard.yaml
+  deleted:
+    description: Ознака видалення для інкрементальної синхронізації.
+    type: boolean
