@@ -1,10 +1,20 @@
 get:
-  summary: Товари (картка, ціна, залишок, атрибути)
+  summary: Товари, що потребують синхронізації (порційно)
+  description: >-
+    Повертає порцію товарів, які ще потребують синхронізації (дата синхронізації
+    відсутня або менша за дату останніх змін картки). Розмір порції задається
+    параметром limit (за замовчуванням 1000); традиційної offset/cursor пагінації
+    немає. Після обробки порції сайт підтверджує її через POST
+    /api/goods/sync-confirm, і наступний запит поверне наступні неотримані товари.
+    Параметр reset віддає повний список з нуля. У заголовках відповіді:
+    x-sync-timestamp — мітка вибірки (передається у підтвердження);
+    x-sync-total-count — скільки товарів ще потребують синхронізації.
   operationId: getGoods
   tags:
     - goods
   parameters:
-    - $ref: ../components/parameters/Since.yaml
+    - $ref: ../components/parameters/Limit.yaml
+    - $ref: ../components/parameters/Reset.yaml
     - $ref: ../components/parameters/RequestId.yaml
   security:
     - bearerAuth: []
@@ -14,6 +24,8 @@ get:
       headers:
         x-sync-timestamp:
           $ref: ../components/headers/SyncTimestamp.yaml
+        x-sync-total-count:
+          $ref: ../components/headers/SyncTotalCount.yaml
       content:
         application/json:
           schema:

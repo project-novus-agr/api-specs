@@ -1,0 +1,9 @@
+schema:
+  type: integer
+  minimum: 1
+  default: 1000
+in: query
+name: limit
+required: false
+description: >-
+  Максимальна кількість товарів у відповіді. Опціональний, за замовчуванням 1000.

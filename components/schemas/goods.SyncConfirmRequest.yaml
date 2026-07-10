@@ -1,0 +1,17 @@
+type: object
+description: Підтвердження синхронізації порції товарів.
+required:
+  - syncTimestamp
+  - goodsRefs
+properties:
+  syncTimestamp:
+    description: >-
+      Часова мітка вибірки — значення заголовка x-sync-timestamp з попередньої
+      відповіді /api/goods.
+    type: integer
+    format: int64
+  goodsRefs:
+    description: ID товарів, які сайт успішно обробив.
+    type: array
+    items:
+      type: integer
