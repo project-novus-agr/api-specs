@@ -13,7 +13,7 @@ properties:
   id:
     type: integer
   name:
-    $ref: ./dictionaries.LocaleName.yaml
+    type: string
   startDate:
     description: Дата початку дії програми.
     type: string
