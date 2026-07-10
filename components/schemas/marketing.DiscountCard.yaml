@@ -1,0 +1,14 @@
+type: object
+description: Дисконтна картка/сертифікат маркетингової програми.
+required:
+  - discountCardsRef
+  - discountCardsNumber
+  - personaldataRef
+properties:
+  discountCardsRef:
+    type: integer
+  discountCardsNumber:
+    type: string
+  personaldataRef:
+    description: Посилання на персональні дані власника картки.
+    type: integer

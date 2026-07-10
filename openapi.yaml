@@ -42,3 +42,13 @@ paths:
     $ref: paths/api_dictionaries_inventory-analytics.yaml
   /api/goods:
     $ref: paths/api_goods.yaml
+  /api/discount-sets:
+    $ref: paths/api_discount-sets.yaml
+  /api/marketing-programs:
+    $ref: paths/api_marketing-programs.yaml
+  /api/identical-goods:
+    $ref: paths/api_identical-goods.yaml
+  /api/discounts:
+    $ref: paths/api_discounts.yaml
+  /api/dictionaries/inventory-groups:
+    $ref: paths/api_dictionaries_inventory-groups.yaml
