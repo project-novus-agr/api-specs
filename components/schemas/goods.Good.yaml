@@ -1,0 +1,125 @@
+type: object
+description: Повна картка товару — картка, ціна, залишок та атрибути разом.
+required:
+  - goodsRef
+  - goodsCode
+  - article
+  - inventoryGroupsRef
+  - trademarksRef
+  - regionsRef
+  - saleMeasuresRef
+  - storageMeasuresRef
+  - measuresCoeff
+  - inventoryCollectionsRef
+  - width
+  - length
+  - height
+  - diameter
+  - warranty
+  - customsCode
+  - flNovelty
+  - flOnlyView
+  - name
+  - shopsPriceVal
+  - valutsRef
+  - bestDiscountsRef
+  - marketingProgramsPrices
+  - count
+  - goodsAvailAbilityStatusesRef
+  - shopsRef
+  - firstInvoicesDate
+  - attributes
+  - deleted
+properties:
+  goodsRef:
+    type: integer
+  goodsCode:
+    type: integer
+  article:
+    type: string
+  inventoryGroupsRef:
+    type: integer
+  trademarksRef:
+    type: integer
+  regionsRef:
+    type: integer
+  saleMeasuresRef:
+    type: integer
+  storageMeasuresRef:
+    type: integer
+  measuresCoeff:
+    description: Коефіцієнти перерахунку між одиницями. Ключ — ID одиниці виміру.
+    type: object
+    additionalProperties:
+      type: number
+  inventoryCollectionsRef:
+    type: array
+    items:
+      type: integer
+  width:
+    type:
+      - number
+      - "null"
+  length:
+    type:
+      - number
+      - "null"
+  height:
+    type:
+      - number
+      - "null"
+  diameter:
+    type:
+      - number
+      - "null"
+  warranty:
+    type:
+      - integer
+      - "null"
+  customsCode:
+    type: string
+  flNovelty:
+    type: boolean
+  flOnlyView:
+    type: boolean
+  name:
+    $ref: ./dictionaries.LocaleName.yaml
+  shopsPriceVal:
+    description: Ціна у вихідній валюті.
+    type: number
+  valutsRef:
+    description: Валюта ціни.
+    type:
+      - integer
+      - "null"
+  bestDiscountsRef:
+    type:
+      - integer
+      - "null"
+  marketingProgramsPrices:
+    type: array
+    items:
+      $ref: ./goods.MarketingProgramPrice.yaml
+  count:
+    description: Залишок.
+    type: number
+  goodsAvailAbilityStatusesRef:
+    description: Статус наявності.
+    type: integer
+  shopsRef:
+    type: array
+    items:
+      type: integer
+  firstInvoicesDate:
+    type:
+      - string
+      - "null"
+    format: date
+  attributes:
+    description: Повний набір характеристик товару (replace при будь-якій зміні).
+    type: array
+    items:
+      $ref: ./goods.GoodAttributeValue.yaml
+  deleted:
+    description: Ознака видалення для інкрементальної синхронізації.
+    type: boolean

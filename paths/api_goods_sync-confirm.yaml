@@ -1,0 +1,34 @@
+post:
+  summary: Підтвердження синхронізації товарів
+  description: >-
+    Приймає ID товарів, які сайт успішно обробив, разом з x-sync-timestamp
+    відповідної вибірки. Позначає ці товари синхронізованими, тому наступний запит
+    до /api/goods їх більше не поверне.
+  operationId: confirmGoodsSync
+  tags:
+    - goods
+  parameters:
+    - $ref: ../components/parameters/RequestId.yaml
+  security:
+    - bearerAuth: []
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/goods.SyncConfirmRequest.yaml
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - marked
+            properties:
+              marked:
+                description: Кількість товарів, позначених як синхронізовані.
+                type: integer
+    "401":
+      $ref: ../components/responses/401Unauthorized.yaml
