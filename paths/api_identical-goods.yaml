@@ -10,9 +10,6 @@ get:
   responses:
     "200":
       description: OK
-      headers:
-        x-sync-timestamp:
-          $ref: ../components/headers/SyncTimestamp.yaml
       content:
         application/json:
           schema:
