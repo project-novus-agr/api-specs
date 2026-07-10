@@ -20,7 +20,5 @@ properties:
     type: string
   flDelete:
     type: boolean
-  flModified:
-    type: boolean
   name:
     $ref: ./dictionaries.LocaleName.yaml
