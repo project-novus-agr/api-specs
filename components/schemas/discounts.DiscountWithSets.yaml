@@ -1,0 +1,42 @@
+type: object
+description: Акція типу «набори товарів».
+required:
+  - id
+  - name
+  - startDate
+  - endDate
+  - percent
+  - actionTypesRef
+  - actionTypesName
+  - discountsSets
+  - deleted
+properties:
+  id:
+    type: integer
+  name:
+    $ref: ./dictionaries.LocaleName.yaml
+  startDate:
+    description: Дата початку дії акції.
+    type: string
+    format: date
+  endDate:
+    description: Дата закінчення дії акції.
+    type: string
+    format: date
+  percent:
+    description: Відсоток знижки.
+    type: number
+  actionTypesRef:
+    description: ID типу акції.
+    type: integer
+  actionTypesName:
+    description: Назва типу акції.
+    type: string
+  discountsSets:
+    description: Набори товарів.
+    type: array
+    items:
+      $ref: ./discounts.DiscountSet.yaml
+  deleted:
+    description: Ознака видалення для інкрементальної синхронізації.
+    type: boolean

@@ -1,0 +1,32 @@
+type: object
+description: Товар у складі набору.
+required:
+  - goodsRef
+  - goodsCode
+  - fixPrice
+  - discountPercent
+  - resultPrice
+  - saleMeasuresRef
+  - count
+properties:
+  goodsRef:
+    type: integer
+  goodsCode:
+    type: integer
+  fixPrice:
+    description: Акційна фіксована ціна.
+    type:
+      - number
+      - "null"
+  discountPercent:
+    description: Відсоток фактичної знижки.
+    type: number
+  resultPrice:
+    description: Фактична ціна акції.
+    type: number
+  saleMeasuresRef:
+    description: ID одиниці продажу товару.
+    type: integer
+  count:
+    description: Кількість товару в наборі.
+    type: number
