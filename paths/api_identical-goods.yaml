@@ -4,7 +4,6 @@ get:
   tags:
     - goods
   parameters:
-    - $ref: ../components/parameters/Since.yaml
     - $ref: ../components/parameters/RequestId.yaml
   security:
     - bearerAuth: []
