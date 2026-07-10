@@ -12,6 +12,3 @@ properties:
     type: array
     items:
       type: integer
-  deleted:
-    description: Ознака видалення для інкрементальної синхронізації.
-    type: boolean
