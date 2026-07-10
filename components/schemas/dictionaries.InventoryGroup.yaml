@@ -1,0 +1,24 @@
+type: object
+description: >
+  Товарна група (вузол дерева категорій). Дерево будується за полем pid
+  (pid == null — кореневий вузол).
+required:
+  - id
+  - pid
+  - keyStr
+  - flDelete
+  - flModified
+  - name
+properties:
+  id:
+    type: integer
+  pid:
+    type:
+      - integer
+      - "null"
+  keyStr:
+    type: string
+  flDelete:
+    type: boolean
+  name:
+    $ref: ./dictionaries.LocaleName.yaml

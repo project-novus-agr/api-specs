@@ -1,0 +1,42 @@
+type: object
+description: Акція.
+required:
+  - id
+  - name
+  - startDate
+  - endDate
+  - percent
+  - actionTypesRef
+  - actionTypesName
+  - goods
+  - deleted
+properties:
+  id:
+    type: integer
+  name:
+    type: string
+  startDate:
+    description: Дата початку дії акції.
+    type: string
+    format: date
+  endDate:
+    description: Дата закінчення дії акції.
+    type: string
+    format: date
+  percent:
+    description: Відсоток знижки.
+    type: number
+  actionTypesRef:
+    description: ID типу акції.
+    type: integer
+  actionTypesName:
+    description: Назва типу акції.
+    type: string
+  goods:
+    description: Товари, що беруть участь в акції.
+    type: array
+    items:
+      $ref: ./discounts.DiscountGood.yaml
+  deleted:
+    description: Ознака видалення для інкрементальної синхронізації.
+    type: boolean

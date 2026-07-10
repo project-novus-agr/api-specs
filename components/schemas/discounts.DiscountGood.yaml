@@ -1,0 +1,28 @@
+type: object
+description: Деталі акції по окремому товару.
+required:
+  - goodsRef
+  - goodsCode
+  - fixPrice
+  - discountPercent
+  - resultPrice
+  - saleMeasuresRef
+properties:
+  goodsRef:
+    type: integer
+  goodsCode:
+    type: integer
+  fixPrice:
+    description: Акційна фіксована ціна.
+    type:
+      - number
+      - "null"
+  discountPercent:
+    description: Відсоток фактичної знижки.
+    type: number
+  resultPrice:
+    description: Фактична ціна акції.
+    type: number
+  saleMeasuresRef:
+    description: ID одиниці продажу товару.
+    type: integer
